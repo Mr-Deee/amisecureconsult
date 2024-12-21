@@ -28,8 +28,13 @@
   
   .heroContent h1 {
     font-size: 2.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000;
   }
-  
+  .heroContent p {
+    font-size: 1.1rem;
+    color: #000;
+  }
   .services {
     padding: 50px;
     background: #fff;
@@ -73,6 +78,92 @@
     background-size: cover; /* Ensures the image covers the whole section */
     background-position: center; /* Centers the image */
     filter: blur(10px); /* Blurs the image */
-    opacity: 0.7; /* Adds transparency for better readability */
+    opacity: 0.2; /* Adds transparency for better readability */
     z-index: 1; /* Places the backdrop behind the content */
   }
+  .services {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .serviceCard {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .serviceCard p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services h2 {
+      font-size: 2rem;
+    }
+  
+    .servicesGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .serviceCard {
+      padding: 1rem;
+    }
+  }
+  

@@ -12,9 +12,9 @@ export default function Header() {
       <nav className={styles.navbar}>
         <a href="#">Home</a>
         <a href="#">Services</a>
-        <a href="#">Portfolio</a>
+        {/* <a href="#">Portfolio</a>
         <a href="#">Team</a>
-        <a href="#">Blog</a>
+        <a href="#">Blog</a> */}
         <a href="#">Contacts</a>
       </nav>
     </header>
