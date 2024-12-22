@@ -1,26 +1,56 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    background: #f9f9f9;
 
-    padding: 20px;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and navbar */
+  padding: 0 20px;
+  background-color: #fff;
+  height: 60px;
+}
   .logo {
     font-size: 24px;
     font-weight: bold;
   }
+  .navbar {
+    display: flex;
+    gap: 20px;
+    margin-left: auto; /* Push navbar to the far right */
+    align-items: center;
+  }
+
+  .services {
+    position: relative;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f0f8ff, #add8e6); /* Gradient background */
+    background-size: cover; /* Ensures the image or gradient covers the section */
+    background-position: center; /* Centers the background */
+    color: #333;
+    z-index: 2; /* Keeps it above the heroBackdrop */
+    overflow: hidden;
+    border-radius: 15px; /* Optional: adds rounded edges */
+  }
+
+
+
+
+  
+  .servicetitle{
+        display: flex;
+    align-items: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
   
   .navbar a {
-    margin: 0 10px;
-    color: #000;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
   }
   
   .hero {
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
     padding: 50px;
     background: #f9f9f9;
@@ -35,10 +65,7 @@
     font-size: 1.1rem;
     color: #000;
   }
-  .services {
-    padding: 50px;
-    background: #fff;
-  }
+  
   
   .servicesGrid {
     display: grid;
@@ -81,12 +108,109 @@
     opacity: 0.2; /* Adds transparency for better readability */
     z-index: 1; /* Places the backdrop behind the content */
   }
-  .services {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
+  
+
+
+  .contactPage {
+    background: linear-gradient(135deg, #f0f8ff, #add8e6); /* Gradient background */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    color: rgb(37, 31, 31);
   }
   
+  .contactContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .imageSection {
+    flex: 1;
+  }
+  
+  .imageSection img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .formSection {
+    flex: 2;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .formGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submitButton {
+    padding: 10px;
+    background-color: #005bb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #003f7f;
+  }
+  
+  .successMessage {
+    margin-top: 20px;
+    color: #00ff00;
+  }
+
+
+
+  
+  
+  
+  .title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+
+  
+
+
   .services h2 {
     font-size: 2.5rem;
     color: #333;
@@ -102,7 +226,7 @@
     align-items: center;
     padding: 1rem;
   }
-  
+
   .serviceCard {
     background: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -130,6 +254,32 @@
     transform: translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
+  .buttonexplore {
+    background: linear-gradient(90deg, #6adcff, #2575fc); /* Gradient background */
+    color: white; /* Text color */
+    font-size: 1.2rem; /* Text size */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded edges */
+    padding: 0.75rem 2rem; /* Padding for button size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 1rem;
+  }
+  
+  .buttonexplore:hover {
+    background: linear-gradient(90deg, #2575fc, #62c3ff); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .buttonexplore:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow on click */
+  }
+
   
   /* Animations */
   @keyframes fadeIn {
@@ -140,6 +290,7 @@
       opacity: 1;
     }
   }
+
   
   @keyframes slideUp {
     0% {
