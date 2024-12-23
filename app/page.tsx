@@ -33,6 +33,21 @@ export default function Home() {
           <Portfolio />
         </section> */}
       </main>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <p>&copy; {new Date().getFullYear()} AMI Consult. All rights reserved.</p>
+          <p>
+            <a href="/privacy-policy">Privacy Policy</a> |{' '}
+            <a href="/terms-of-service">Terms of Service</a>
+          </p>
+          {/* <p>Follow us: 
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"> Facebook</a> | 
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"> Twitter</a> | 
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
+          </p> */}
+        </div>
+      </footer>
     </>
     </div>
   );

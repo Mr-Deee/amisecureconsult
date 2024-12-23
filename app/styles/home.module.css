@@ -1,5 +1,26 @@
 
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
 
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerContent a {
+  color: #00bcd4;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footerContent a:hover {
+  text-decoration: underline;
+}
 
 .header {
   display: flex;
@@ -24,23 +45,99 @@
     position: relative;
     padding: 50px 20px;
     background: linear-gradient(135deg, #f0f8ff, #add8e6); /* Gradient background */
-    background-size: cover; /* Ensures the image or gradient covers the section */
-    background-position: center; /* Centers the background */
     color: #333;
-    z-index: 2; /* Keeps it above the heroBackdrop */
+    z-index: 2;
     overflow: hidden;
-    border-radius: 15px; /* Optional: adds rounded edges */
+    border-radius: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
-
-
-
-
   
-  .servicetitle{
-        display: flex;
-    align-items: left;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  .servicetitle {
+    text-align: left;
+    margin-bottom: 30px;
   }
+  
+  .servicetitle h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dfe6ed;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .serviceCard {
+    width: 293px;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+  }
+  
+  .cardImageContainer {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, #f0f8ff, #d0e6f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cardImage {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.25rem;
+    margin: 15px 0 10px;
+    color: #edf2f7;
+    text-align: center;
+  }
+  
+  .serviceCard p {
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
+    margin: 0 15px 20px;
+  }
+  
+  .cardHoverDetails {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(235, 238, 242, 0.9);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .serviceCard:hover .cardHoverDetails {
+    transform: translateY(0%);
+  }
+  
+  .cardHoverDetails p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
   
   .navbar a {
     text-decoration: none;
@@ -110,9 +207,8 @@
   }
   
 
-
   .contactPage {
-    background: linear-gradient(135deg, #f0f8ff, #add8e6); /* Gradient background */
+    background: linear-gradient(135deg, #f0f8ff, #ecf6f9);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -121,7 +217,18 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-    color: rgb(37, 31, 31);
+    color: #25201f;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   .contactContainer {
@@ -130,20 +237,51 @@
     gap: 20px;
     width: 100%;
     max-width: 1200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    animation: scaleUp 1.5s ease-out;
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
   }
   
   .imageSection {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .imageSection img {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: floatImage 3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes floatImage {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-10px);
+    }
   }
   
   .formSection {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .contactForm {
@@ -161,56 +299,81 @@
   .formGroup label {
     font-weight: bold;
     margin-bottom: 5px;
+    color: #555;
   }
   
   .formGroup input,
   .formGroup textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: border 0.3s;
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    border: 1px solid #005bb5;
+    outline: none;
   }
   
   .submitButton {
-    padding: 10px;
-    background-color: #005bb5;
+    padding: 12px;
+    background: linear-gradient(90deg, #005bb5, #0077ff);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .submitButton:hover {
-    background-color: #003f7f;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
   }
   
   .successMessage {
     margin-top: 20px;
     color: #00ff00;
+    font-weight: bold;
+    animation: successFadeIn 1.5s ease-in-out;
   }
-
-
-
   
-  
+  @keyframes successFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
   
-  .form {
-    display: flex;
-    flex-direction: column;
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+    animation: cardGlow 2s infinite alternate ease-in-out;
   }
-
-  .formGroup {
-    margin-bottom: 1.5rem;
-  }
-
   
-
-
+  @keyframes cardGlow {
+    from {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+    }
+    to {
+      box-shadow: 0 15px 25px rgba(0, 123, 255, 0.5), 0 10px 10px rgba(0, 123, 255, 0.3);
+    }
+  }
+  
   .services h2 {
     font-size: 2.5rem;
     color: #333;

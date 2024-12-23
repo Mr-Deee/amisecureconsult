@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import styles from '../styles/home.module.css';
-
+import Image from 'next/image';
+import contact from '../images/contact.png';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -38,7 +39,7 @@ const Contact = () => {
         <h1>Contact Us</h1>
         <div className={styles.contactContainer}>
           <div className={styles.imageSection}>
-            <img src="/contact-image.jpg" alt="Contact Us" className={styles.contactImage} />
+            <Image src={contact} alt="Contact Us" className={styles.contactImage} />
           </div>
           <div className={styles.formSection}>
             <form onSubmit={handleSubmit} className={styles.contactForm}>

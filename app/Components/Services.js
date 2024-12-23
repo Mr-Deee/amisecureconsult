@@ -4,19 +4,50 @@ import logo from '../images/logo.png';
 
 export default function Services() {
   const service = [
-    { title: 'Swift', description: 'Laser Beam Dedicated Team', image:logo  },
-    { title: 'AML Audit', description: 'Laser Beam Dedicated Team', image: logo},
-    { title: 'ISO Audits', description: 'Laser Beam Dedicated Team', image: logo },
-    { title: 'PCI DSS Audits', description: 'Laser Beam Dedicated Team', image: logo },
-    { title: 'Applications Control', description: 'Laser Beam Dedicated Team', image: logo },
-    { title: 'Information Security', description: 'Human Blockchain', image: logo },
-    { title: 'Network Security', description: 'Ensuring robust and secure infrastructures', image: logo},
-    { title: 'Compliance Audits', description: 'Aligning with global standards', image: logo},
+    { 
+      title: 'Swift', 
+      description: 'We conduct SWIFT (Society for Worldwide Interbank Financial Telecommunication) audits, focusing on ensuring compliance with the SWIFT Customer Security Programme (CSP) and identifying vulnerabilities in financial messaging systems.', 
+      image: logo 
+    },
+    { 
+      title: 'AML Audit', 
+      description: 'For Anti-Money Laundering (AML) audits, we focus on ensuring compliance within the online environment. Our tailored framework audits the AML aspects of a website to ensure it adheres to legal and security standards.', 
+      image: logo 
+    },
+    { 
+      title: 'ISO Audits', 
+      description: 'We conduct ISO audits to ensure your organization complies with international standards for various aspects, including quality management, information security, and environmental management.', 
+      image: logo 
+    },
+    { 
+      title: 'PCI DSS Audits', 
+      description: 'Our team specializes in auditing Payment Card Industry Data Security Standard (PCI DSS) compliance, focusing on protecting cardholder data and securing payment systems.', 
+      image: logo 
+    },
+    { 
+      title: 'Applications Control', 
+      description: 'We provide audits focused on controlling and securing applications, ensuring their alignment with business needs and compliance requirements.', 
+      image: logo 
+    },
+    { 
+      title: 'Information Security', 
+      description: 'We offer comprehensive audits on information security, focusing on safeguarding data and protecting against cyber threats, using frameworks such as NIST and ISO 27001.', 
+      image: logo 
+    },
+    { 
+      title: 'Network Security', 
+      description: 'We ensure robust and secure infrastructures through audits that assess vulnerabilities in your network and recommend measures to protect against external and internal threats.', 
+      image: logo 
+    },
+    { 
+      title: 'Compliance Audits', 
+      description: 'Our compliance audits ensure your organization adheres to local and international standards, such as GDPR, HIPAA, and industry-specific regulations, mitigating legal and financial risks.', 
+      image: logo 
+    },
   ];
 
   return (
     <section className={styles.services}>
-
       <div className={styles.servicetitle}>
         <h2>Pick Your Service</h2>
       </div>
@@ -33,9 +64,9 @@ export default function Services() {
               />
             </div>
             <h3>{service.title}</h3>
-            <p>{service.description}</p>
+            <p>                  </p>
             <div className={styles.cardHoverDetails}>
-              <p>Learn more about {service.title}!</p>
+              <p> {service.description}!</p>
             </div>
           </div>
         ))}
