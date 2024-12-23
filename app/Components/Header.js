@@ -16,7 +16,7 @@ export default function Header() {
     <header className={styles.header}>
       {/* Logo */}
       <div className={styles.logoContainer}>
-        <Image src={logo} alt="Logo" width={250} height={90} />
+        <Image src={logo} alt="Logo" width={200} height={70} priority />
       </div>
 
       {/* Navigation */}
@@ -27,7 +27,11 @@ export default function Header() {
       </nav>
 
       {/* Hamburger Menu */}
-      <button className={styles.hamburger} onClick={toggleMenu}>
+      <button
+        className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerActive : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle navigation"
+      >
         ☰
       </button>
     </header>

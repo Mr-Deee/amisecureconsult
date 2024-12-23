@@ -5,18 +5,17 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      
       <div className={styles.heroContent}>
-        <h1>Empowering Businesses with </h1>
-          <h1>Secure Solutions</h1>
-        <p>Tailored IT, Cybersecurity, and Audit  ß Services for the Digital Age</p>
-
-        <button className={styles.buttonexplore}>Explore</button>
-        </div>
-
+        <h1 className={styles.heroTitle}>
+          Empowering Businesses with <span className={styles.highlight}>Secure Solutions</span>
+        </h1>
+        <p className={styles.heroDescription}>
+          Tailored IT, Cybersecurity, and Audit Services for the Digital Age
+        </p>
+        <button className={styles.buttonExplore}>Explore</button>
+      </div>
       <div className={styles.heroImage}>
-      <Image src={logo} alt="Logo" width={600} height={600} />
-
+        <Image src={logo} alt="Logo" width={600} height={600} priority />
       </div>
     </section>
   );
