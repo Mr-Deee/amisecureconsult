@@ -99,14 +99,15 @@
     flex-direction: column;
   }
 
+  .navbar.navOpen {
+    display: flex;
+  }
+
   .hamburger {
     display: block;
   }
-
-  .navOpen {
-    display: flex;
-  }
 }
+
 
   .logo {
     font-size: 24px;
@@ -123,7 +124,7 @@
     position: relative;
     padding: 50px 20px;
     background: linear-gradient(135deg, #f0f8ff, #add8e6); /* Gradient background */
-    color: #333;
+    color: #272626;
     z-index: 2;
     overflow: hidden;
     border-radius: 1px;
@@ -137,6 +138,7 @@
   
   .servicetitle h2 {
     font-size: 2rem;
+    padding-left: 36px;
     font-weight: bold;
     color: #dfe6ed;
   }
@@ -372,6 +374,16 @@
     color: #25201f;
     font-family: 'Arial', sans-serif;
     animation: fadeIn 2s ease-in;
+  }
+
+  .contactPage h1{
+    font-weight: bold;
+    padding-top: 1px;
+    padding-left: 77px;
+
+    padding-bottom: 23px;
+    font-size: 63px;
+align-self: start;
   }
   
   @keyframes fadeIn {
