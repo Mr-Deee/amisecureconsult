@@ -12,7 +12,10 @@ export default function Hero() {
         <p className={styles.heroDescription}>
           Tailored IT, Cybersecurity, and Audit Services for the Digital Age
         </p>
-        <button className={styles.buttonExplore}>Explore</button>
+        <a href="#services" className={styles.buttonExplore}>
+  Explore
+</a>
+
       </div>
       <div className={styles.heroImage}>
         <Image src={logo} alt="Logo" width={600} height={600} priority />

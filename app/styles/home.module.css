@@ -130,6 +130,28 @@
     border-radius: 1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tabs button:hover,
+  .tabs button.activeTab {
+    background-color: #007bff;
+    color: white;
+  }
   
   .servicetitle {
     text-align: left;
@@ -143,6 +165,13 @@
     color: #dfe6ed;
   }
   
+  .servicetitle h1 {
+    font-size: 1rem;
+    padding-left: 36px;
+    padding-top: 0px;
+    font-weight: lighter;
+    color: #000000;
+  }
   .servicesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
