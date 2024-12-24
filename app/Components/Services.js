@@ -24,22 +24,22 @@ export default function Services() {
         image: logo,
       },
       {
-        title: 'Application Control Audits',
+        title: 'Application Control Audit',
         description: 'We provide audits focused on controlling and securing applications, ensuring their alignment with business needs and compliance requirements.',
         image: logo,
       },
       {
-        title: 'Compliance Audits',
+        title: 'Compliance Audit',
         description: 'Our compliance audits ensure your organization adheres to local and international standards, such as GDPR, HIPAA, and industry-specific regulations, mitigating legal and financial risks.',
         image: logo,
       },
       {
-        title: 'AML Audits',
+        title: 'AML Audit',
         description: 'For Anti-Money Laundering (AML) audits, we focus on ensuring compliance within the online environment. Our tailored framework audits the AML aspects of a website to ensure it adheres to legal and security standards.',
         image: logo,
       },
       {
-        title: 'SWIFT CSP Audits',
+        title: 'SWIFT CSP Audit',
         description: 'We conduct SWIFT Customer Security Programme (CSP) audits, focusing on compliance and identifying vulnerabilities in financial messaging systems.',
         image: logo,
       },
